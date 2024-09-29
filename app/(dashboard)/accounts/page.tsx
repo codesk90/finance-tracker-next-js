@@ -7,11 +7,11 @@ import { columns } from "./columns";
 import { DataTable } from "@/components/DataTable";
 import { useGetAccounts } from "@/features/accounts/api/useGetAccounts";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useBulkDelete } from "@/features/accounts/api/useBulkDelete";
+import { useBulkDeleteAccounts } from "@/features/accounts/api/useBulkDelete";
 
 export default function AccountsPage() {
   const newAccount = useNewAccount();
-  const deleteAccounts = useBulkDelete();
+  const deleteAccounts = useBulkDeleteAccounts();
   const accountsQuery = useGetAccounts();
   const accounts = accountsQuery.data || [];
 
